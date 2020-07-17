@@ -38,11 +38,13 @@ function numberWithCommas(x) {
 function createDonateElement(person, sum) {
   var str = person + " donated $" + sum + ".";
   var node = document.createElement("div");
-  node.className = "donationElem"
+  node.className = "donationElem";
   var text = document.createElement("h4");
   text.innerText = str;
   node.appendChild(text);
-  document.getElementById("donators").append(node);
+  document
+    .getElementById("donators")
+    .insertBefore(node, document.getElementById("donators").childNodes[0]);
 }
 
 function donate() {
@@ -62,13 +64,14 @@ function donate() {
   document.getElementById("averageDonations").innerHTML =
     "Average Donation: $" + numberWithCommas(decimal);
 }
+
 function App() {
   return (
     <div className="App">
       <h1 id="totalDonations">Total Donations: ${sum}</h1>
-      <h3 id="averageDonations">Average Donation: ${sum / cnt}</h3>
+      <h3 id="averageDonations">Average Donation: $0</h3>
       <button className="button" onClick={() => donate()}>
-        Donate
+        Donate!
       </button>
       <div id="donators"></div>
     </div>
