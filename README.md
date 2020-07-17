@@ -1,3 +1,6 @@
+## Inspiration
+The idea for this project came from a recent bill for $30,000 to a company similar to GoFundMe [Link](https://github.com/bhargavannem/Donations). The technologies that were used for this are React JS on the front end, Node.js for backend, and Google's Firebase Firestore for Database. The link to the project hosted online is [here](https://donationapp-65b58.web.app/). It is hosted using Firebase as well.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
